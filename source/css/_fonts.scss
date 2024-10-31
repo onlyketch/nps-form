@@ -1,0 +1,21 @@
+/*
+Roboto Flex:
+Regular 400
+ExtraBold 800
+ExtraBlack
+Light 300
+Black 900
+Medium 500
+
+Roboto Condensed Black 900
+*/
+
+@font-face {
+	font-display: swap; 
+    font-family: "Roboto Condensed Black";
+    src: local('Roboto Condensed'),
+    	 url('../fonts/RobotoCondensed-Black.woff2') format("woff2"),  
+         url('../fonts/RobotoCondensed-Black.woff') format("woff");
+    font-weight: 900;
+    font-style: normal;
+}

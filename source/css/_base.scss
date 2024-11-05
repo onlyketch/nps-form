@@ -8,15 +8,16 @@ $light-gray: #F3F3F3;
 $middle-gray: #E7E8E9;
 $dark-gray: #DDDDDD;
 
+html,
 .nps-survey {
   scroll-behavior: smooth;
 }
 
 .wrapper {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: $red;
-  background-image: url('../images/cover0.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -24,10 +25,12 @@ $dark-gray: #DDDDDD;
   overflow-x: hidden;
   overflow-y: auto;
   transition: background-image .2s ease-out;
+  z-index: 1;
 
   @media (max-width: 1023px) {
     background-image: none !important;
     background-color: white !important;
+    height: auto;
   }
 }
 

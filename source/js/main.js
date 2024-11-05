@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             $('.nps-survey').scrollTop(0);
+            $(window).scrollTop(0);
 
         }
     }
@@ -124,20 +125,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         $('.nps-survey').scrollTop(0);
+        $(window).scrollTop(0);
     }
 
     function updatePercent() {
         let target = surveyCountArr[surveyCounter] + surveyTotal;
+        const backgroundMobArr = document.querySelectorAll('.nps-survey__background-mob');
+        const backgroundArr = document.querySelectorAll('.nps-survey__background');
+
+        backgroundArr[12 - surveyCounter].style.visibility = 'hidden';
+        backgroundMobArr[12 - surveyCounter].style.visibility = 'hidden';
        
         let timerId = setInterval(function() {
             if (surveyTotal !== target && surveyTotal < 100) {
                 surveyTotal += 1;
                 $('#percent').text(surveyTotal);
                 $('#percent-mob').text(surveyTotal);
-                let newBackgroundUrl = 'url(../images/cover' + (surveyCounter + 1) + '.jpg)';
-                let newBackgroundMobUrl = 'url(../images/cover-mob' + (surveyCounter + 1) + '.jpg)';
-                $('.wrapper').css({'background-image': newBackgroundUrl });
-                $('.nps-survey__progress-wrapper-mobile').css({'background-image': newBackgroundMobUrl });
             } else {
                 clearInterval(timerId);
                 surveyCounter++;

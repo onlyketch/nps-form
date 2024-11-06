@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let surveyTotal = 0;
     const surveyCountArr = [10, 10, 10, 10, 10, 9, 8, 6, 10, 10, 6, 1];
     let isError = false;
-    let progressMobFixed = false;
     
 
     const stepsArr = ['#step1', '#step2', '#step3', '#step4'];
@@ -105,11 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             $('.nps-survey').scrollTop(0);
             $(window).scrollTop(0);
-            progressMobFixed = false;
-            $('.nps-survey__step').removeClass('fixed');
-
-            console.log(window.pageYOffset);
-
         }
     }
 
@@ -131,10 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         $('.nps-survey').scrollTop(0);
         $(window).scrollTop(0);
-        progressMobFixed = false;
-        $('.nps-survey__step').removeClass('fixed');
-
-        console.log(window.pageYOffset);
     }
 
     function updatePercent() {
@@ -460,16 +450,6 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 $('.btn-submit').text('Отправить');
             } 
-        }
-    });
-
-    //fixed mobile header
-    window.addEventListener('scroll', function() {
-        if (this.window.pageYOffset > 425) {
-            if (!progressMobFixed) {
-                $('.nps-survey__step').addClass('fixed');
-                progressMobFixed = true;
-            }        
         }
     });
 });

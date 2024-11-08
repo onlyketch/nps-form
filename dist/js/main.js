@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function translateToEng() {
         if (lang == 'en' || lang == 'EN') {
+            //ERROR TEXT
+            $('.nps-survey__grade-error-text').each(function(index, item) {
+                $(item).text('Please rate');
+            });
             //STEP 1
             $('#step1 > .nps-survey__question').text('How do you rate the work of the team?');
             $('#step1 > .nps-survey__description').text('We create the most accurate forecasts thanks to many years of international practice and unique work experience');
@@ -28,7 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
             $('#step3 > .nps-survey__description').text('We create the most accurate forecasts thanks to many years of international practice and unique work experience');
 
             $('#chance-reference > .nps-survey__grade-name').text('How likely are you to recommend us?');
+            $('#chance-reference > .nps-survey__grade-explication').text('1 – would not recommend, 10 – definitely recommend');
             $('#contact-again > .nps-survey__grade-name').text('How likely are you to contact us again?');
+            $('#contact-again > .nps-survey__grade-explication').text('1 – i won’t contact you, 10 – i will definitely contact you');
             $('#survey-comment > .nps-survey__grade-name').text('Here you can write any comments and wishes');
 
             //THANKS SCREEN
@@ -66,13 +72,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const stepsArr = ['#step1', '#step2', '#step3', '#step4'];
 
     function fillCheck() {
+        let grades = document.querySelectorAll(stepsArr[currentStep - 1] + ' .nps-survey__grade');
         $(stepsArr[currentStep - 1] + ' .nps-survey__grade').each(function(index, item) {
             if (!$(item).hasClass('checked')) {
                 $(item).addClass('error');
                 isError = true;
             }
         });
+        if (grades[0].classList.contains('error') || grades[1].classList.contains('error')) {
+            $('.nps-survey').scrollTop(0);
+            $(window).scrollTop(0);
+        }
     }
+
+    //запись был ли тест пройден в local storage
+    function wasСompleted() {
+        localStorage.setItem('wasСompleted', true);
+    };
     
     function nextStep() {
 
@@ -416,11 +432,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 event.preventDefault();
                 let form_data = $(this).serialize();
                 $.ajax({
-                    type: "GET", 
-                    url: "/",
+                    type: "GET",
+                    url: "/", 
                     data: form_data,
                     success: function() {
                         console.log('Отправлено!');
+                        wasСompleted();
                     }
                 });
             });

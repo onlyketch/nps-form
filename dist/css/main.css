@@ -216,7 +216,7 @@ p {
     margin-top: 313px;
   }
 }
-@media (max-height: 668px) {
+@media (max-height: 740px) {
   .nps-survey__step {
     height: auto;
   }

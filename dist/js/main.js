@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let surveyTotal = 0;
     const surveyCountArr = [10, 10, 10, 10, 10, 9, 8, 6, 10, 10, 6, 1];
     let isError = false;
+    let canClick = true;
     
 
     const stepsArr = ['#step1', '#step2', '#step3', '#step4'];
@@ -159,6 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 clearInterval(timerId);
                 surveyCounter++;
+                canClick = true;
             }
         }, 40);
 
@@ -220,6 +222,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         $(value + ' .nps-survey__grade-value').click(function() {
 
+            if (canClick) {
+
             if ($(value).hasClass('checked')) {
                 var current = $(this);
                 var prevAll = $(this).prevAll();
@@ -254,6 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     isError = false;
                 } 
                 $(value).addClass('checked');
+                canClick = false;
                 updatePercent(); 
             }
 
@@ -415,6 +420,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             $(value + ' .nps-survey__grade-text').addClass('show');
             $(value + '-nps').val($(this).text());
+
+            }
         });
     });
 

@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (lang == 'en' || lang == 'EN') {
                             $(value + ' .nps-survey__grade-text').text('No');
                         } else {
-                            $(value + ' .nps-survey__grade-text').text('Нет');
+                            $(value + ' .nps-survey__grade-text').text('Точно нет');
                         }
                         
                     } else {
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (lang == 'en' || lang == 'EN') {
                             $(value + ' .nps-survey__grade-text').text('Unlikely');
                         } else {
-                            $(value + ' .nps-survey__grade-text').text('Маловероятно');
+                            $(value + ' .nps-survey__grade-text').text('Возможно');
                         }
                         
                     }
@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (lang == 'en' || lang == 'EN') {
                             $(value + ' .nps-survey__grade-text').text('Likely');
                         } else {
-                            $(value + ' .nps-survey__grade-text').text('Вероятно');
+                            $(value + ' .nps-survey__grade-text').text('Вероятно, да');
                         }
                         
                     }

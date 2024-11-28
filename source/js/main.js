@@ -10,38 +10,38 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             //STEP 1
             $('#step1 > .nps-survey__question').text('How do you rate the work of the team?');
-            $('#step1 > .nps-survey__description').text('We create the most accurate forecasts thanks to many years of international practice and unique work experience');
+            $('#step1 > .nps-survey__description').text('At CMWP we value customer focus and professionalism. Tell us about your experience with the CMWP team');
 
             $('#team-speed > .nps-survey__grade-name').text('Speed of interaction');
-            $('#team-communication > .nps-survey__grade-name').text('Communication');
+            $('#team-communication > .nps-survey__grade-name').text('Politeness of the staff');
             $('#team-professionalism > .nps-survey__grade-name').text('Professionalism');
-            $('#team-work > .nps-survey__grade-name').text('Approach to the work');
+            $('#team-work > .nps-survey__grade-name').text('Customer focus');
 
             //STEP 2
-            $('#step2 > .nps-survey__question').text('Please rate the proposed solution');
-            $('#step2 > .nps-survey__description').text('We create the most accurate forecasts thanks to many years of international practice and unique work experience');
+            $('#step2 > .nps-survey__question').text('How do you evaluate the proposed solution?');
+            $('#step2 > .nps-survey__description').text('Share your opinion - did you like the CMWP solution');
 
-            $('#task-grade > .nps-survey__grade-name').text('Goal achievement');
-            $('#task-time > .nps-survey__grade-name').text('Deadlines');
+            $('#task-grade > .nps-survey__grade-name').text('Execution of a task');
+            $('#task-time > .nps-survey__grade-name').text('Completion deadlines');
             $('#presentations > .nps-survey__grade-name').text('Presentation materials');
             $('#manager-job > .nps-survey__grade-name').text('The work of your manager');
-            $('#quality > .nps-survey__grade-name').text('Correlation of price and quality');
+            $('#quality > .nps-survey__grade-name').text('Value for money');
 
             //STEP 3
-            $('#step3 > .nps-survey__question').text('How likely are you to recommend us?');
-            $('#step3 > .nps-survey__description').text('We create the most accurate forecasts thanks to many years of international practice and unique work experience');
+            $('#step3 > .nps-survey__question').text('Would you recommend CMWP to your friends?');
+            $('#step3 > .nps-survey__description').text('Your opinion is important to us. If you are asked to share your contact information, how would you respond to us?');
 
-            $('#chance-reference > .nps-survey__grade-name').text('How likely are you to recommend us?');
+            $('#chance-reference > .nps-survey__grade-name').text('Are you ready to recommend us?');
             $('#chance-reference > .nps-survey__grade-explication').text('1 – would not recommend, 10 – definitely recommend');
-            $('#contact-again > .nps-survey__grade-name').text('How likely are you to contact us again?');
+            $('#contact-again > .nps-survey__grade-name').text('Would you use the Commonwealth Partnership again?');
             $('#contact-again > .nps-survey__grade-explication').text('1 – i won’t contact you, 10 – i will definitely contact you');
-            $('#survey-comment > .nps-survey__grade-name').text('Here you can write any comments and wishes');
+            $('#survey-comment > .nps-survey__grade-name').text('Do you have any suggestions or comments? Write them here');
 
             //THANKS SCREEN
             $('#step4 > .nps-survey__question').text('Thank you!');
-            $('#step4 > .nps-survey__description').text('We create the most accurate forecasts thanks to many years of international practice and unique work experience');
+            $('#step4 > .nps-survey__description').text('Thank you for your time and ratings! Your feedback makes us better!');
 
-            $('.nps-survey__stay-title').text('Stay updated');
+            $('.nps-survey__stay-title').text('Stay up to date with CMWP commercial real estate news');
             $('.nps-survey__stay-subtitle').text('Subscribe to our telegram channel');
             $('.nps-survey__stay-subscribe').text('Subscribe');
 
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (value == '#chance-reference' || value == '#contact-again') {
                         
                         if (lang == 'en' || lang == 'EN') {
-                            $(value + ' .nps-survey__grade-text').text('No');
+                            $(value + ' .nps-survey__grade-text').text('Definitely not');
                         } else {
                             $(value + ' .nps-survey__grade-text').text('Точно нет');
                         }
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (value == '#chance-reference' || value == '#contact-again') {
                         
                         if (lang == 'en' || lang == 'EN') {
-                            $(value + ' .nps-survey__grade-text').text('Unlikely');
+                            $(value + ' .nps-survey__grade-text').text('Maybe');
                         } else {
                             $(value + ' .nps-survey__grade-text').text('Возможно');
                         }
@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 case '7':
                     if (value == '#chance-reference' || value == '#contact-again') {
                         if (lang == 'en' || lang == 'EN') {
-                            $(value + ' .nps-survey__grade-text').text('Likely');
+                            $(value + ' .nps-survey__grade-text').text('Probably yes');
                         } else {
                             $(value + ' .nps-survey__grade-text').text('Вероятно, да');
                         }

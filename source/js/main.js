@@ -9,33 +9,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 $(item).text('Please rate');
             });
             //STEP 1
-            $('#step1 > .nps-survey__question').text('How do you rate the work of the team?');
-            $('#step1 > .nps-survey__description').text('At CMWP we value customer focus and professionalism. Tell us about your experience with the CMWP team');
+            $('#step1 > .nps-survey__question').text('How do you rate our work?');
+            $('#step1 > .nps-survey__description').text('At CMWP we value customer focus and professionalism. Tell us about your experience with the CMWP team.');
 
             $('#team-speed > .nps-survey__grade-name').text('Speed of interaction');
-            $('#team-communication > .nps-survey__grade-name').text('Politeness of the staff');
+            $('#team-communication > .nps-survey__grade-name').text('Politeness');
             $('#team-professionalism > .nps-survey__grade-name').text('Professionalism');
             $('#team-work > .nps-survey__grade-name').text('Customer focus');
 
             //STEP 2
             $('#step2 > .nps-survey__question').text('How do you evaluate the proposed solution?');
-            $('#step2 > .nps-survey__description').text('Share your opinion - did you like the CMWP solution');
+            $('#step2 > .nps-survey__description').text('Share your opinion — did you like the CMWP solution');
 
-            $('#task-grade > .nps-survey__grade-name').text('Execution of a task');
-            $('#task-time > .nps-survey__grade-name').text('Completion deadlines');
+            $('#task-grade > .nps-survey__grade-name').text('Task execution');
+            $('#task-time > .nps-survey__grade-name').text('Meeting deadlines');
             $('#presentations > .nps-survey__grade-name').text('Presentation materials');
-            $('#manager-job > .nps-survey__grade-name').text('The work of your manager');
+            $('#manager-job > .nps-survey__grade-name').text('Work of your manager');
             $('#quality > .nps-survey__grade-name').text('Value for money');
 
             //STEP 3
-            $('#step3 > .nps-survey__question').text('Would you recommend CMWP to your friends?');
-            $('#step3 > .nps-survey__description').text('Your opinion is important to us. If you are asked to share your contact information, how would you respond to us?');
+            $('#step3 > .nps-survey__question').text('Would you recommend CMWP to your network?');
+            $('#step3 > .nps-survey__description').text('We care what you think. If one asks you to advise a contractor, would you recommend us?');
 
             $('#chance-reference > .nps-survey__grade-name').text('Are you ready to recommend us?');
             $('#chance-reference > .nps-survey__grade-explication').text('1 – would not recommend, 10 – definitely recommend');
-            $('#contact-again > .nps-survey__grade-name').text('Would you use the Commonwealth Partnership again?');
+            $('#contact-again > .nps-survey__grade-name').text('Would you seek for Commonwealth Partnership services again?');
             $('#contact-again > .nps-survey__grade-explication').text('1 – i won’t contact you, 10 – i will definitely contact you');
-            $('#survey-comment > .nps-survey__grade-name').text('Do you have any suggestions or comments? Write them here');
+            $('#survey-comment > .nps-survey__grade-name').text('Do you have further suggestions or comments? Write them here');
 
             //THANKS SCREEN
             $('#step4 > .nps-survey__question').text('Thank you!');
